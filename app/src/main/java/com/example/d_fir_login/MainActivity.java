@@ -52,17 +52,16 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void signIn(final String EmployeeId, final String password) {
+    private void signIn(final String EmployeeId, final String Password) {
 
         users.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if(dataSnapshot.child(EmployeeId).exists()){
                     User login = dataSnapshot.child(EmployeeId).getValue(User.class);
-                    if(login.getPassword().equals(password)){
-                        Toast.makeText(MainActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, OtpActivity.class);
-                        intent.putExtra("EmployeeId", EmployeeId);
+                    if(login.getPassword().equals(Password)){
+                        Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(MainActivity.this, DashboardActivity.class);
                         startActivity(intent);
                     }
                     else

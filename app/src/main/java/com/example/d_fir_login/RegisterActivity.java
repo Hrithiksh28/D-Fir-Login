@@ -69,7 +69,6 @@ public class RegisterActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        EnableSignUp();
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
     }
-    private boolean validateName(){
+   /* private boolean validateName(){
         String Name = txtName.getText().toString();
         if(Name.isEmpty()){
             txtName.setError("Field Can't be Empty");
@@ -184,6 +183,6 @@ public class RegisterActivity extends AppCompatActivity {
             return true;
         }
         return false;
-    }
+    }*/
 
 }

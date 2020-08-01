@@ -8,6 +8,10 @@ public class User {
     private String Password;
     private String Designation;
 
+    public User(){
+
+    }
+
     public User(String name, String employeeId, String phoneNumber, String password, String designation) {
         Name = name;
         EmployeeId = employeeId;
